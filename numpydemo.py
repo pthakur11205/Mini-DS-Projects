@@ -14,3 +14,13 @@ c = a - b
 print(c)
 c = a * b
 print(c)
+
+a = np.arange(10)**3
+print(a)
+
+#slicing
+print(a[2:5])
+print(a[:4])
+print(a[-6:])
+
+
