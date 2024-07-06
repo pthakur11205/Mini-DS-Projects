@@ -25,7 +25,13 @@ arr = np.array([
 [3, 5, 7]
 ])
 
+
 df = pd.DataFrame(arr, columns = ['num1', 'num2', 'num3'], 
-                  index=[1, 2, 3])
+                  index=[1, 2, 3], copy = True)
+
+#testing copy function
+#when copy is true, modifications are not in dataframe
+#when copy is false (default), mods ARE in data frame
+arr[0, 0] = 1000
 
 print(df)
