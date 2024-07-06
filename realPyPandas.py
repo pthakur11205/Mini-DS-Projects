@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 data = {
     'name': ['Xavier', 'Ann', 'Jana', 'Yi', 'Robin', 'Amal', 'Nori'],
@@ -16,3 +17,15 @@ print(df)
 print(df['age'])
 print(df.age[104])
 
+print(' ')
+
+arr = np.array([
+[1, 3, 5],
+[2, 4, 6],
+[3, 5, 7]
+])
+
+df = pd.DataFrame(arr, columns = ['num1', 'num2', 'num3'], 
+                  index=[1, 2, 3])
+
+print(df)
