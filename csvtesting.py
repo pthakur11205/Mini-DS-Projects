@@ -19,5 +19,10 @@ print(arrData)
 print(df.city)
 print(df.loc[2])
 
-#.loc function with slicing and column specification
+#.loc and .iloc function with slicing and column specification
 print(df.loc[1:4, ['name', 'age']])
+print(df.iloc[0:4, [0, 2]])
+
+#at and iat
+print(df.at[1, 'name'])
+print(df.iat[0, 0])
