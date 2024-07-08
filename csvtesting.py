@@ -72,3 +72,8 @@ print(df)
 
 #converting edited dataframe to a csv
 df.to_csv('modified.csv', index = False)
+
+#data filtering
+#~ means 'not'
+print(df.loc[df['py-score'] < 80])
+print(df.loc[~df['name'].str.contains('n')])
