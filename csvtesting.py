@@ -60,3 +60,12 @@ print(df.describe())
 #adding another column with arithmetic
 df['total score'] = df['js-score'] + df['py-score'] + df['c++ score']
 print(df)
+
+#deleting columns
+df = df.drop(columns=['total score'])
+print(df)
+
+#new columns using iloc
+#axis=1 specifies horizontal adding
+df['total score'] = df.iloc[:, 3:6].sum(axis=1)
+print(df)
