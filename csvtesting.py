@@ -47,3 +47,5 @@ for index, row in df.iterrows():
     print(index, row['city'])
 
 
+#loc functionality
+print(df.loc[df['name'] == "Xavier"])
