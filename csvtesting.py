@@ -26,3 +26,8 @@ print(df.iloc[0:4, [0, 2]])
 #at and iat
 print(df.at[1, 'name'])
 print(df.iat[0, 0])
+
+#appending rows
+df.loc[len(df)+1] = ['Joe', 'Boston', 45, 79.0]
+print(df)
+
