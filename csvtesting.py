@@ -77,3 +77,7 @@ df.to_csv('modified.csv', index = False)
 #~ means 'not'
 print(df.loc[df['py-score'] < 80])
 print(df.loc[~df['name'].str.contains('n')])
+
+#groupby
+df.loc[len(df)+1] = ['Jonny', 'Hershey', 28, 68.0, 88.0, 79.0, 212.0]
+print(df.groupby(['py-score']).count())
