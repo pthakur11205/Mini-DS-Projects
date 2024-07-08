@@ -31,3 +31,14 @@ print(df.iat[0, 0])
 df.loc[len(df)+1] = ['Joe', 'Boston', 45, 79.0]
 print(df)
 
+#deleting rows
+df = df.drop(labels=[8])
+print(df)
+
+#appending columns
+df['js-score'] = np.array([71.0, 95.0, 88.0, 79.0, 91.0, 91.0, 80.0])
+print(df)
+    #inserting columns
+df.insert(loc=4, column='c++ score', value=np.array([86.0, 81.0, 78.0, 88.0, 74.0, 70.0, 81.0]))
+print(df)
+
