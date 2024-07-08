@@ -49,3 +49,10 @@ for index, row in df.iterrows():
 
 #loc functionality
 print(df.loc[df['name'] == "Xavier"])
+
+#using desrcibe method
+print(df.describe())
+
+#sorting
+df = df.sort_values('name')
+print(df)
