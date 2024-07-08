@@ -42,3 +42,14 @@ print(df)
 df.insert(loc=4, column='c++ score', value=np.array([86.0, 81.0, 78.0, 88.0, 74.0, 70.0, 81.0]))
 print(df)
 
+#deleting columns
+del df['c++ score']
+print(df)
+
+#arithmetic
+print(df['py-score'] + df['js-score']) 
+print(df['py-score']/100)
+
+#adding columns using arithmetic
+df['total-score'] = df['py-score'] + df['js-score']
+print(df)
