@@ -54,5 +54,9 @@ print(df.loc[df['name'] == "Xavier"])
 print(df.describe())
 
 #sorting
-df = df.sort_values('name')
+# df = df.sort_values('name')
+# print(df)
+
+#adding another column with arithmetic
+df['total score'] = df['js-score'] + df['py-score'] + df['c++ score']
 print(df)
