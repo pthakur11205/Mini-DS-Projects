@@ -69,3 +69,6 @@ print(df)
 #axis=1 specifies horizontal adding
 df['total score'] = df.iloc[:, 3:6].sum(axis=1)
 print(df)
+
+#converting edited dataframe to a csv
+df.to_csv('modified.csv')
