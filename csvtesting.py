@@ -42,3 +42,8 @@ print(df)
 df.insert(loc=4, column='c++ score', value=np.array([86.0, 81.0, 78.0, 88.0, 74.0, 70.0, 81.0]))
 print(df)
 
+#iterating
+for index, row in df.iterrows():
+    print(index, row['city'])
+
+
