@@ -85,3 +85,7 @@ df4 = pd.DataFrame(
 result = pd.concat([df1, df4], axis=1)
 
 print(result)
+
+    #join = inner takes intersection of axis values
+result = pd.concat([df1, df4], axis=1, join="inner")
+print(result)
