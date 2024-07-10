@@ -94,8 +94,21 @@ print(result)
 result = pd.concat([df1, df4], axis=1).reindex(df1.index)
 print(result)
 
-#concat series and df together
+#concat series as column and df together
 s1 = pd.Series(["X0", "X1", "X2", "X3"], name="X")
 
 result = pd.concat([df1, s1], axis = 1)
 print(result)
+
+#concat series as row and df together
+    #convert series to a dataframe then concat
+s1 = pd.Series(["X0", "X1", "X2", "X3"], index=["A", "B", "C", "D"])
+
+result = pd.concat([df1, s1.to_frame().T], ignore_index=True)
+print(result)
+
+#using keys as identifiers for separate dataframes
+result = pd.concat([df1, df2, df3], keys = ["a", "b", "c"])
+print(result)
+
+print(result.loc["c"])
