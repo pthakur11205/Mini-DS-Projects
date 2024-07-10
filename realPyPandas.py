@@ -93,3 +93,9 @@ print(result)
 #reindexing
 result = pd.concat([df1, df4], axis=1).reindex(df1.index)
 print(result)
+
+#concat series and df together
+s1 = pd.Series(["X0", "X1", "X2", "X3"], name="X")
+
+result = pd.concat([df1, s1], axis = 1)
+print(result)
