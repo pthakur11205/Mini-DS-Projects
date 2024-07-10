@@ -89,3 +89,7 @@ print(result)
     #join = inner takes intersection of axis values
 result = pd.concat([df1, df4], axis=1, join="inner")
 print(result)
+
+#reindexing
+result = pd.concat([df1, df4], axis=1).reindex(df1.index)
+print(result)
