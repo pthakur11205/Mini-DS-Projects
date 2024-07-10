@@ -112,3 +112,12 @@ result = pd.concat([df1, df2, df3], keys = ["a", "b", "c"])
 print(result)
 
 print(result.loc["c"])
+
+#merge() has different operations
+    # one-to-one: joining two DataFrame objects on their indexes which must contain unique values.
+
+    # many-to-one: joining a unique index to one or more columns in a different DataFrame.
+
+    # many-to-many : joining columns on columns.
+
+
