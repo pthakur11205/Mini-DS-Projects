@@ -120,4 +120,10 @@ print(result.loc["c"])
 
     # many-to-many : joining columns on columns.
 
+# Missing values represented as NaN for numpy daya types
+s2 = pd.Series([1, 2]).reindex([0, 1, 2])
+print(s2)
 
+# isna() to find missing data
+ser = pd.Series([pd.Timestamp("2020-01-01"), pd.NaT])
+print(pd.isna(ser))
