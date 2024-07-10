@@ -51,6 +51,7 @@ for index, row in df.iterrows():
 print(df.loc[df['name'] == "Xavier"])
 
 #using desrcibe method
+print("DESCRIBING//////////////")
 print(df.describe())
 
 #sorting

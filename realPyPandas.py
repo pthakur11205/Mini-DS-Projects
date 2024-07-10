@@ -127,3 +127,18 @@ print(s2)
 # isna() to find missing data
 ser = pd.Series([pd.Timestamp("2020-01-01"), pd.NaT])
 print(pd.isna(ser))
+
+# Missing values propagate (ex: pd.NA + 1 returns <NA>)
+# bool of NA is ambigious, must use isna() to determine if smth is NA
+
+#dropping missing data using dropna()
+    #drops rows/columns with any missing data
+df = pd.DataFrame([[np.nan, 1, 2], [1, 2, np.nan], [1, 2, 3]])
+print(df)
+print(" ")
+print(df.dropna())
+
+# filling missing data by value: fillna()
+data = {"np": [1.0, np.nan, np.nan, 2], "arrow": pd.array([1.0, pd.NA, pd.NA, 2], dtype="float64[pyarrow]")}
+df = pd.DataFrame(data)
+print(df)
