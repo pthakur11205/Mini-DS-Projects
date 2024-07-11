@@ -142,3 +142,6 @@ print(df.dropna())
 data = {"np": [1.0, np.nan, np.nan, 2], "arrow": pd.array([1.0, pd.NA, pd.NA, 2], dtype="float64[pyarrow]")}
 df = pd.DataFrame(data)
 print(df)
+print("////")
+print(df.fillna(0)) # filling in with scalar
+
