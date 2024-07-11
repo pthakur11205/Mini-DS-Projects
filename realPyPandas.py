@@ -145,3 +145,11 @@ print(df)
 print("////")
 print(df.fillna(0)) # filling in with scalar
 
+
+#applying functions in pandas
+df = pd.DataFrame([[4, 9, 16]] * 3, columns=['A', 'B', 'C'])
+print(df)
+
+print(df.apply(np.sqrt))
+
+print(df.apply(np.sum, axis = 1))
