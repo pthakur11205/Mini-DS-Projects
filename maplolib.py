@@ -23,8 +23,15 @@ plt.plot(ages_x, dev_y, color='k', linestyle='--',marker = '.',  label = 'All De
 plt.xlabel("ages")
 plt.ylabel('median salary')
 plt.title('Median Salary (USD) by Age')
+plt.axis([25, 45, 10000, 110000])
 
 plt.legend()
 plt.tight_layout()
+
+fig_1 = plt.figure(1, figsize=(20, 4.8))
+chart_1 = fig_1.add_subplot(121)
+chart_2 = fig_1.add_subplot(122)
+chart_1.plot(ages_x, py_dev_y)
+chart_2.scatter(ages_x, js_dev_y)
 
 plt.show()
