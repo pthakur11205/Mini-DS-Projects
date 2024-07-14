@@ -15,6 +15,12 @@ sns.jointplot(x='speeding', y='alcohol', data = crash_df, kind = 'hex')
 #kde plot
 sns.kdeplot(crash_df['alcohol'])
 
-#pair plot
-sns.pairplot(crash_df)
+#pair plots
+# sns.pairplot(crash_df)
+
+tips_df = sns.load_dataset('tips')
+
+sns.pairplot(tips_df, hue='sex', palette='Blues')
+
 plt.show()
+
