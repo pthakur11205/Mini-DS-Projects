@@ -26,3 +26,11 @@ print(mean)
 #pandas can bypass this since parameter skipna
 mean = z_with_nan.mean()
 print(mean)
+
+#weighted mean demo
+x = [8.0, 1, 2.5, 4, 28.0]
+w = [0.1, 0.2, 0.3, 0.25, 0.15]
+wmean = sum(w[i] * x[i] for i in range(len(x))) / sum(w)
+print(wmean)
+wmean = np.average(y, weights=w)
+print(wmean)
