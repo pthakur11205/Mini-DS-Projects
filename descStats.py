@@ -22,3 +22,7 @@ print(mean)
 #nan values return a NaN mean
 mean = statistics.mean(x_with_nan)
 print(mean)
+
+#pandas can bypass this since parameter skipna
+mean = z_with_nan.mean()
+print(mean)
