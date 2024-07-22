@@ -34,3 +34,11 @@ wmean = sum(w[i] * x[i] for i in range(len(x))) / sum(w)
 print(wmean)
 wmean = np.average(y, weights=w)
 print(wmean)
+
+#harmonic mean
+hmean = statistics.harmonic_mean(x)
+print(hmean)
+
+#geo mean
+gmean = statistics.geometric_mean(x)
+print(gmean)
