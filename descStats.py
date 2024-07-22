@@ -42,3 +42,6 @@ print(hmean)
 #geo mean
 gmean = statistics.geometric_mean(x)
 print(gmean)
+
+#median 
+print(statistics.median(x))
