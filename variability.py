@@ -15,3 +15,13 @@ print(statistics.variance(x))
 
 #std
 print(statistics.stdev(x))
+
+#skewness
+y = np.array(x)
+print(scipy.stats.skew(y, bias=False))
+z = pd.Series(x)
+print(z.skew())
+
+#percentiles
+x = [-5.0, -1.1, 0.1, 2.0, 8.0, 12.8, 21.0, 25.8, 41.0]
+print(statistics.quantiles(x, n=2))
