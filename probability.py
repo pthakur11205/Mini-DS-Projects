@@ -9,4 +9,6 @@ import seaborn as sns
 sns.set_color_codes(palette="deep")
 # settings for seaborn plot sizes
 sns.set_theme(rc={'figure.figsize':(5,5)})
+# import uniform distribution
+from scipy.stats import uniform
 
