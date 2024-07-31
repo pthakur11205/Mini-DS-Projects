@@ -39,3 +39,17 @@ X_train_scaled, X_test_scaled, y_train, y_test = train_test_split(X_scaled,
 print(f"Train size: {round(len(X_train_scaled) / len(X) * 100)}% \n\
 Test size: {round(len(X_test_scaled) / len(X) * 100)}%")
 
+# Instantiating the models 
+logistic_regression = LogisticRegression()
+svm = SVC()
+tree = DecisionTreeClassifier()
+
+# Training the models 
+logistic_regression.fit(X_train_scaled, y_train)
+svm.fit(X_train_scaled, y_train)
+tree.fit(X_train_scaled, y_train)
+
+# Making predictions with each model
+log_reg_preds = logistic_regression.predict(X_test_scaled)
+svm_preds = svm.predict(X_test_scaled)
+tree_preds = tree.predict(X_test_scaled)
