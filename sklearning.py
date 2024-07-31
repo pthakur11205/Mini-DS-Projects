@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report
 
 
 wine_data = load_wine() 
@@ -53,3 +54,15 @@ tree.fit(X_train_scaled, y_train)
 log_reg_preds = logistic_regression.predict(X_test_scaled)
 svm_preds = svm.predict(X_test_scaled)
 tree_preds = tree.predict(X_test_scaled)
+
+# Store model predictions in a dictionary
+# this makes it's easier to iterate through each model
+# and print the results. 
+model_preds = {
+    "Logistic Regression": log_reg_preds,
+    "Support Vector Machine": svm_preds,
+    "Decision Tree": tree_preds
+}
+
+for model, preds in model_preds.items():
+    print(f"{model} Results:\n{classification_report(y_test, preds)}", sep="\n\n")
