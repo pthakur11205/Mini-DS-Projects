@@ -1,6 +1,5 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
 
 x = [
  [0, 1], [5, 1], [15, 2], 
@@ -10,5 +9,14 @@ x = [
 
 y = [4, 5, 20, 14, 32, 22, 38, 43]
 
-plt.plot(x, y)
-plt.show()
+#Create model
+model = LinearRegression().fit(x, y)
+
+#Print properties of model
+print(model.score(x, y))
+print(model.intercept_)
+print(model.coef_)
+
+#Predictions
+model_preds = model.predict(x)
+print(model_preds)
