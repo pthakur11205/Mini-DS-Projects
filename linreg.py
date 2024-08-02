@@ -15,3 +15,7 @@ print(f"The x explains {(r_sq*100).round(2)}% of y's variation")
 #Print slope and intercept of equation
 print(f"intercept: {model.intercept_}")
 print(f"slope: {model.coef_}")
+
+#Display predictions
+model_pred = model.predict(x)
+print(f"predicted response:\n{model_pred}")
