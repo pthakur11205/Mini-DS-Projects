@@ -10,3 +10,8 @@ model.fit(x, y)
 #Calculate R^2 and display
 r_sq = model.score(x, y)
 print(f"coefficient of determination: {r_sq}")
+print(f"The x explains {(r_sq*100).round(2)}% of y's variation")
+
+#Print slope and intercept of equation
+print(f"intercept: {model.intercept_}")
+print(f"slope: {model.coef_}")
