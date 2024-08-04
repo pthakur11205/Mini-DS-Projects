@@ -13,3 +13,5 @@ model.fit(x, y)
 #check performance
 print(model.predict_proba(x))
 print(model.predict(x))
+
+print(model.score(x, y))
