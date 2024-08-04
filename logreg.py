@@ -10,3 +10,6 @@ model = LogisticRegression(solver='liblinear', random_state=0)
 
 model.fit(x, y)
 
+#check performance
+print(model.predict_proba(x))
+print(model.predict(x))
