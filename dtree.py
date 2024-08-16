@@ -28,3 +28,14 @@ y_pred = clf.predict(X_test)
 # Model Accuracy, how often is the classifier correct?
 print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
+# Create Decision Tree classifer object
+clf = DecisionTreeClassifier(criterion="entropy", max_depth=3)
+
+# Train Decision Tree Classifer
+clf = clf.fit(X_train,y_train)
+
+#Predict the response for test dataset
+y_pred = clf.predict(X_test)
+
+# Model Accuracy, how often is the classifier correct?
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
