@@ -14,3 +14,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import cross_val_score
  
 warnings.filterwarnings('ignore')
+
+df= pd.read_csv('Salaries.csv')
+print(df)
