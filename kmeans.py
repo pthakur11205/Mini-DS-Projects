@@ -40,4 +40,13 @@ for k in range(1, 11):
      kmeans.fit(scaled_features)
      sse.append(kmeans.inertia_)
 
-    
+
+#Plotting  
+plt.style.use("fivethirtyeight")
+plt.plot(range(1, 11), sse)
+plt.xticks(range(1, 11))
+plt.xlabel("Number of Clusters")
+plt.ylabel("SSE")
+plt.show()
+
+#Kneed will help identify elbow if it is is not obvious
